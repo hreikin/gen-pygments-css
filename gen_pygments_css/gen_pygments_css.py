@@ -4,8 +4,6 @@ import subprocess
 from pathlib import Path
 from pygments.styles import get_all_styles
 
-logging.basicConfig(level=logging.DEBUG)
-
 def gen_pygments_css(css_dir="css/", styles_list=list(get_all_styles()), css_selector=None):
     """Generate `CSS` stylesheets for each `Pygments` supported style.
     
