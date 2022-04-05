@@ -67,18 +67,19 @@ def gen_pygments_css(css_dir="css/", styles_list=list(get_all_styles()), css_sel
     css_dir = Path(css_dir).resolve()
     logging.info(f"Creating '{css_dir}' directory if it doesn't already exist.'")
     css_dir.mkdir(parents=True, exist_ok=True)
-    
     file_list = list()
     logging.info("Generating CSS stylesheets.")
     for item in styles_list:
-        file_location = f"{css_dir.resolve()}/{item}.css"
+        file_location = Path(f"{css_dir.resolve()}/{item}.css")
         file_list.append(file_location)
         logging.info(f"Style: {item}")
         logging.info(f"Location: {file_location}")
         if css_selector == None:
-            subprocess.run([f"pygmentize -S {item} -f html > {file_location}"], shell=True)
+            cmd_str = f"pygmentize -S {item} -f html > {file_location}"
+            subprocess.run(cmd_str, shell=True)
         else:
-            subprocess.run([f"pygmentize -S {item} -f html -a {css_selector} > {file_location}"], shell=True)
+            cmd_str = f"pygmentize -S {item} -f html -a {css_selector} > {file_location}"
+            subprocess.run(cmd_str, shell=True)
     logging.info(f"Generated CSS stylesheets available at '{css_dir}'.")
     return file_list
 
