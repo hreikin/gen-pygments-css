@@ -17,8 +17,6 @@ def gen_pygments_css(css_dir="css/", styles_list=list(get_all_styles()), css_sel
     strings containing `Pygments` style names.
     
     Example Usage:
-    
-        ```python
         
         # Called with no arguments.
         gen_pygments_css()
@@ -37,9 +35,7 @@ def gen_pygments_css(css_dir="css/", styles_list=list(get_all_styles()), css_sel
         my_list = gen_pygments_css()
         
         # Call with a CSS selector defined.
-        gen_pygments_css(css_selector=".highlight")
-        
-        ```
+        gen_pygments_css(css_selector=".highlight")    
     
     Args:
         css_dir (str): Relative or absolute string of the location to output the 
