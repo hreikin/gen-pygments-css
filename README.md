@@ -6,7 +6,7 @@ Generate CSS stylesheets for each Pygments supported style.
 
 - Github Link: [https://github.com/hreikin/gen-pygments-css](https://github.com/hreikin/gen-pygments-css)  
 - PyPi Link: [https://pypi.org/project/gen-pygments-css/](https://pypi.org/project/gen-pygments-css/)  
-- PDF Documentation: [https://hreikin.github.io/gen-pygments-css/pdf/gen-pygments-css-documentation-LATEST.pdf](https://hreikin.github.io/gen-pygments-css/pdf/tkintermd-documentation-LATEST.pdf)
+- PDF Documentation: [https://hreikin.github.io/gen-pygments-css/pdf/gen-pygments-css-documentation-LATEST.pdf](https://hreikin.github.io/gen-pygments-css/pdf/gen-pygments-css-documentation-LATEST.pdf)
 
 ### Built With
 
