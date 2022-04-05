@@ -1,15 +1,53 @@
 # Generate Pygments CSS Stylesheets
 
-Generate `CSS` stylesheets for each `Pygments` supported style.
-    
+## About The Project
+
+Generate CSS stylesheets for each Pygments supported style.
+
+- Github Link: [https://github.com/hreikin/gen-pygments-css](https://github.com/hreikin/gen-pygments-css)  
+- PyPi Link: [https://pypi.org/project/gen-pygments-css/](https://pypi.org/project/gen-pygments-css/)  
+- PDF Documentation: [https://hreikin.github.io/gen-pygments-css/pdf/gen-pygments-css-documentation-LATEST.pdf](https://hreikin.github.io/gen-pygments-css/pdf/tkintermd-documentation-LATEST.pdf)
+
+### Built With
+
+- [Pygments](https://github.com/pygments/pygments)
+- [Python](https://www.python.org/)
+
+## Installation
+
+To get a local copy up and running choose one of the below install instructions and follow the steps provided.
+
+### Install With PIP
+
+The simplest way to install `gen-pygments-css` is to use `pip`:
+
+```sh
+pip install gen-pygments-css
+```
+
+### Install From Source
+
+Alternatively you can install from source by following the steps below:
+
+1. Clone the repo:
+   ```sh
+   git clone https://github.com/hreikin/gen-pygments-css.git
+   cd gen-pygments-css/
+   ```
+2. Create and source a Python virtual environment:
+   ```sh
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+3. Install requirements with `pip`:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
 CSS stylesheets for all `Pygments` styles are output into a created `css/` 
-directory by default. 
-    
-To generate a single stylesheet pass in a string containing the name of a 
-`Pygments` style or to generate multilple stylesheets pass in a list of 
-strings containing `Pygments` style names.
-    
-Example Usage:
+directory by default, this can be overridden. 
     
 ```python
         
@@ -26,7 +64,8 @@ gen_pygments_css(styles_list=["monokai", "stata-dark"])
 gen_pygments_css(css_dir="assets/styles/")
 gen_pygments_css(css_dir="/home/user/project/assets/styles/")
         
-# Create a list of strings containing the paths of all stylesheets.
+# Call the function and create a list of strings containing the paths of all 
+# stylesheets.
 my_list = gen_pygments_css()
         
 # Call with a CSS selector defined.
