@@ -38,7 +38,7 @@
   <p align="center">
     Generate CSS stylesheets for each Pygments supported style.
     <br />
-    <a href="https://github.com/hreikin/gen-pygments-css"><strong>Explore the docs »</strong></a>
+    <a href="https://hreikin.github.io/gen-pygments-css/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/hreikin/gen-pygments-css">View Demo</a>
