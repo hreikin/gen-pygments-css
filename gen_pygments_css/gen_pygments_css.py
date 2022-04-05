@@ -12,7 +12,16 @@ def gen_pygments_css(css_dir="css/", styles_list=list(get_all_styles()), css_sel
     
     To generate a single stylesheet pass in a string containing the name of a 
     `Pygments` style or to generate multilple stylesheets pass in a list of 
-    strings containing `Pygments` style names.
+    strings containing `Pygments` style names. More information is available at 
+    the `Pygments` documentation:
+
+    <https://pygments.org/docs/api/?highlight=get_all_styles#pygments.styles.get_all_styles>
+
+    A string, list or tuple containing the CSS selector(s) to prefix onto the 
+    generated `Pygments` classes can also be defined and passed in when calling 
+    the function. More information is available at the `Pygments` documentation: 
+    
+    <https://pygments.org/docs/formatters/?highlight=get_style_defs#HtmlFormatter>
     
     Example Usage:
         
@@ -25,27 +34,27 @@ def gen_pygments_css(css_dir="css/", styles_list=list(get_all_styles()), css_sel
         # Called with a list of strings passed into the styles_list.
         gen_pygments_css(styles_list=["monokai", "stata-dark"])
         
+        # Call with a CSS selector defined.
+        gen_pygments_css(css_selector=".highlight")
+
         # Call with a custom css_dir, can be relative or absolute.
         gen_pygments_css(css_dir="assets/styles/")
         gen_pygments_css(css_dir="/home/user/project/assets/styles/")
         
         # Create a list of strings containing the paths of all stylesheets.
         my_list = gen_pygments_css()
-        
-        # Call with a CSS selector defined.
-        gen_pygments_css(css_selector=".highlight")    
     
     Args:
         css_dir (str): Relative or absolute string of the location to output the 
             generated CSS stylesheets to.
+
         styles_list (list(str)): A string or list of strings containing the name 
             of `Pygments` styles. Defaults to a list of all style names returned 
-            by the `get_all_styles()` function from `Pygments` 
-            (https://pygments.org/docs/api/?highlight=get_all_styles#pygments.styles.get_all_styles).
+            by the `get_all_styles()` function from `Pygments`.
+            
         css_selector (Union[str, list, tuple]): A string, list or tuple 
             containing the CSS selector(s) to prefix onto the generated 
-            `Pygments` classes. More info available here: 
-            https://pygments.org/docs/formatters/?highlight=get_style_defs#HtmlFormatter
+            `Pygments` classes. Defaults to None.
     
     Returns:
         file_list (list(str)): A list of strings containing the location(s) of 
